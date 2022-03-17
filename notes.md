@@ -73,11 +73,44 @@ This benefits React as it renders its JSX elements more quickly. When you render
 
 The key difference between props and state is that **state** is internal and controlled by the component itself while **props** are external and controlled by whatever renders the component.
 
-## Lifecycle Hooks: useState, useEffect
 ## Event Handling
+In React, we do events a little differently:
+click => onClick
+submit => onSubmit
+etc.
+
+To handle our events, we must do two things:
+1. Create our function that will be triggerred by the event.
+Ex. In Example.js:
+```react
+export default class Example extends Component{
+    handleSubmit(e){
+        e.preventDefault();
+        console.log('Submit button has been clicked!');
+    }
+}
+```
+
+2. Make sure to bind the event to our component
+Ex.
+```react
+export default class Example extends Component{
+    constructor(props){
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleSubmit(e){
+        e.preventDefault();
+        console.log('Submit button has been clicked!');
+    }
+}
+```
+
 ## Conditional Rendering
+Please see the example within today's demo to understand this topic.
+
 ## Rendering array contents using JSX
-## Routing
+Please see the example within today's demo to understand this topic.
 
 ## Conclusion
 And that's it! Happy coding!!
