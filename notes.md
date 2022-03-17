@@ -54,6 +54,8 @@ JSX is useful because:
 - less refactoring of our code = can be plug-and-play anywhere in our JS/TS files
 - more modular due to its reusability of the code into components
 
+Components are...a reusable piece of UI that are the core building block of our React applications.
+
 Learn more about JSX [here](https://reactjs.org/docs/introducing-jsx.html).
 
 ## Virtual DOM
